@@ -1,6 +1,7 @@
 import requests
 import os
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
 
@@ -24,6 +25,17 @@ def get_game_price(app_id: int) -> dict:
         "on_sale": price_data["discount_percent"] > 0
     }
 
+def get_manual_games() -> list:
+    with open("games.json", "r") as f:
+        return json.load(f)
+
 if __name__ == "__main__":
-    result = get_game_price(526870)  # Satisfactory
+    # Ár teszt
+    result = get_game_price(526870)
     print(result)
+
+    # Manuális lista teszt
+    games = get_manual_games()
+    print(f"Figyelt játékok ({len(games)}):")
+    for game in games:
+        print(f"- {game['name']} (ID: {game['app_id']}, küszöb: {game['price_threshold']}€)")
