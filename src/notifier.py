@@ -17,9 +17,9 @@ def send_discord(message: str) -> None:
     payload = {"content": message}
     response = requests.post(DISCORD_WEBHOOK_URL, json=payload)
     if response.status_code == 204:
-        print("Discord értesítés elküldve! ✅")
+        print("\tDiscord értesítés elküldve! ✅")
     else:
-        print(f"Discord hiba: {response.status_code}")
+        print(f"\tDiscord hiba: {response.status_code}")
 
 def send_email(subject: str, message: str) -> None:
     msg = MIMEMultipart()
@@ -31,7 +31,7 @@ def send_email(subject: str, message: str) -> None:
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
         server.sendmail(EMAIL_ADDRESS, NOTIFY_EMAIL, msg.as_string())
-        print("Email elküldve! ✅")
+        print("\tEmail elküldve! ✅")
 
 def notify(game_name: str, original_price: float, current_price: float, discount: int) -> None:
     message = (
