@@ -1,4 +1,6 @@
 [
     {"app_id": 526870, "name": "Satisfactory", "price_threshold": 20.00},
-    {"app_id": 1091500, "name": "Cyberpunk 2077", "price_threshold": 20.00}
+    {"app_id": 1091500, "name": "Cyberpunk 2077", "price_threshold": 20.00},
+    {"app_id": 1174180, "name": "Red Dead Redemption 2", "price_threshold": 60.00},
+    {"app_id": 3949040, "name": "RV There Yet?", "price_threshold": 8.00}
 ]
