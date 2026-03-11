@@ -1,4 +1,4 @@
-**# SteamWatcher**
+**## SteamWatcher**
 ## About
 Monitors manually added video game prices, and notifies you via Discord and email.
 
