@@ -2,7 +2,7 @@ name: SteamWatcher
 
 on:
   schedule:
-    - cron: '0 8,14,20 * * *'  # Naponta 3x: 8:00, 14:00, 20:00 UTC
+    - cron: '0 8,15,20 * * *'  # Naponta 3x: 8:00, 14:00, 20:00 UTC
   workflow_dispatch:             # Manuális futtatás is lehetséges
 
 jobs:
