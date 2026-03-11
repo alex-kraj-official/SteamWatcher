@@ -1,0 +1,7 @@
+services:
+  steamwatcher:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./games.json:/app/games.json
